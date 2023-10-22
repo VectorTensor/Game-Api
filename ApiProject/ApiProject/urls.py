@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
    # url("dqn/", include('ApiApplication.urls')),
  #  url("policy/",include('policy.urls')),
-  # url("", include('landing.urls'))
-   url("emotions/",include('emotion.urls'))
+   url("", include('landing.urls')),
+   url("iris/", include('irisFlower.urls'))
+  # url("emotions/",include('emotion.urls'))
 ]

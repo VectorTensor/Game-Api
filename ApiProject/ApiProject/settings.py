@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'policy',
     'landing',
     'emotion',
+    'irisFlower',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
