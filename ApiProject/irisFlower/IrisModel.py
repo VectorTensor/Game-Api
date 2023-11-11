@@ -5,7 +5,7 @@ from sklearn.linear_model import LogisticRegression
 
 from joblib import dump, load
 import os
-
+from sklearn.preprocessing import StandardScaler
 
 class IrisModel:
     def __init__(self) -> None:
@@ -19,10 +19,11 @@ class IrisModel:
 
 
     def flowerType(self, data):
+        sc = StandardScaler()
+        x = sc.fit_transform(np.expand_dims(data,0))
+        x = self.loaded_model.predict(x)
 
-        x = self.loaded_model.predict(np.expand_dims(data,0))
-
-        return self.labelDict[x]
+        return self.labelDict[x[0]]
 
 
 

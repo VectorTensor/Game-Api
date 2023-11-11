@@ -16,10 +16,10 @@ class WineViews(APIView):
     # keys : proline ,flavanoids, od280/od315_of_diluted_wines, alcohol
     def post(self, request):
         x = []
-        x.append(request.data['proline'])
-        x.append(request.data['flavanoids'])
-        x.append(request.data['od280/od315_of_diluted_wines'])
-        x.append(request.data['alcohol'])
+        x.append(float(request.data['proline']))
+        x.append(float(request.data['flavanoids']))
+        x.append(float(request.data['od280/od315_of_diluted_wines']))
+        x.append(float(request.data['alcohol']))
 
         data = np.array(x)
 

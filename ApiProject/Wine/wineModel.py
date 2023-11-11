@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.linear_model import LogisticRegression
 from joblib import load
 import os
-
+from sklearn.preprocessing import StandardScaler
 class WineModel:
     def __init__(self):
         pth = os.path.dirname(__file__)
@@ -15,7 +15,8 @@ class WineModel:
         }
 
     def wineType(self, data):
-        x = self.loaded_model.predict(np.expand_dims(data, 0))
-        return self.labelDict[x]
-    
+        sc = StandardScaler()
+        x = sc.fit_transform(np.expand_dims(data,0))
+        x = self.loaded_model.predict(x)
+        return self.labelDict[x[0]]
     

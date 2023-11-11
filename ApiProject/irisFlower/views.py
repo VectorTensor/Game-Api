@@ -12,8 +12,8 @@ class IrisView(APIView):
         return Response({"message":"send post request with petal size"})
 
     def post(self, request):
-        x = request.data['petal1']
-        y = request.data['petal2']
+        x = float(request.data['petal1'])
+        y = float(request.data['petal2'])
         data = np.array([x,y])
         irisModel = IrisModel()
         label = irisModel.flowerType(data) 
