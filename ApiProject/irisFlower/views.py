@@ -18,5 +18,7 @@ class IrisView(APIView):
         irisModel = IrisModel()
         label = irisModel.flowerType(data) 
 
+        return Response({"label":label})
+
         
 
