@@ -1,0 +1,11 @@
+prefix=/home/prayasht/Prayash/coding/Game-Api/ApiProject/.conda
+exec_prefix=/home/prayasht/Prayash/coding/Game-Api/ApiProject/.conda
+libdir=/home/prayasht/Prayash/coding/Game-Api/ApiProject/.conda/lib
+includedir=/home/prayasht/Prayash/coding/Game-Api/ApiProject/.conda/include
+
+Name: uuid
+Description: Universally unique id library
+Version: 2.32.1
+Requires:
+Cflags: -I${includedir}/uuid
+Libs: -L${libdir} -luuid
