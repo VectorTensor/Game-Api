@@ -3,5 +3,5 @@ from Wine import views
 
 
 urlpatterns = [
-        path('', views.IrisView.as_view()),
+        path('', views.WineViews.as_view()),
         ]
