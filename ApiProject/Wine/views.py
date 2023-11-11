@@ -8,7 +8,7 @@ from .wineModel import WineModel
 
 # Create your views here.
 
-class WineViews:
+class WineViews(APIView):
 
     def get(self, request):
         return Response({"message":"send post request "})
