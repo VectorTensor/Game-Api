@@ -11,7 +11,7 @@ from .wineModel import WineModel
 class WineViews(APIView):
 
     def get(self, request):
-        return Response({"message":"send post request "})
+        return Response({"message":"send post request keys : proline ,flavanoids, od280/od315_of_diluted_wines, alcohol"})
     
     # keys : proline ,flavanoids, od280/od315_of_diluted_wines, alcohol
     def post(self, request):
